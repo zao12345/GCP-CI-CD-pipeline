@@ -1,14 +1,14 @@
 steps:
   # Docker Build
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/zainab-100948833/zainab-100948833:$COMMIT_SHA', '.']
+    args: ['build', '-t', 'gcr.io/zainab-100948833/zainab-100948833:14c8da9', '.']
 
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/zainab-100948833/zainab-100948833:$COMMIT_SHA']
+    args: ['push', 'gcr.io/zainab-100948833/zainab-100948833:14c8da9']
 
 images:
-  - 'gcr.io/zainab-100948833/zainab-100948833:$COMMIT_SHA'
+  - 'gcr.io/zainab-100948833/zainab-100948833:14c8da9'
 
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
