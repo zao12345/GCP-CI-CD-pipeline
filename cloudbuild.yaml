@@ -12,3 +12,4 @@ images:
 
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  serviceAccount: id-51672872889-cloudbuild-gser@cool-keel-408219.iam.gserviceaccount.com
