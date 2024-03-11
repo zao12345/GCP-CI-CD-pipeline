@@ -7,6 +7,16 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/cool-keel-408219/zainab-100948833:$COMMIT_SHA']
 
+  # Continuous Deployment
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'zainab-100948833'
+      - '--image=gcr.io/cool-keel-408219/zainab-100948833:$COMMIT_SHA'
+      - '--platform=managed'
+      - '--region=us-central1'
+      
 images:
   - 'gcr.io/cool-keel-408219/zainab-100948833:$COMMIT_SHA'
 
